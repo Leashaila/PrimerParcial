@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace Servicio.PrimerParcial
 {
-    internal interface IServicioPrimerParcial
+    public interface IServicioPrimerParcial
     {
         public int CalcularArea(int baseRectangulo, int alturaRectangulo);
-
-
-
-
-
 
 
 

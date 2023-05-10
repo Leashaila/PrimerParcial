@@ -4,17 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimerParcial", "PrimerParcial\PrimerParcial.csproj", "{24FFB51E-D869-4FCB-B9CC-C86E0393C8E6}"
-	ProjectSection(ProjectDependencies) = postProject
-		{DCA121A1-1CC6-4C70-83AC-76FEA1A38C5A} = {DCA121A1-1CC6-4C70-83AC-76FEA1A38C5A}
-		{EC1546F5-B1BC-4ECF-8B9F-857161BCBE6F} = {EC1546F5-B1BC-4ECF-8B9F-857161BCBE6F}
-	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servicio.PrimerParcial", "Servicio.PrimerParcial\Servicio.PrimerParcial.csproj", "{EC1546F5-B1BC-4ECF-8B9F-857161BCBE6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servicio.PrimerParcial", "Servicio.PrimerParcial\Servicio.PrimerParcial.csproj", "{EC1546F5-B1BC-4ECF-8B9F-857161BCBE6F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{DCA121A1-1CC6-4C70-83AC-76FEA1A38C5A} = {DCA121A1-1CC6-4C70-83AC-76FEA1A38C5A}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo.PrimerParcial", "Modelo.PrimerParcial\Modelo.PrimerParcial.csproj", "{DCA121A1-1CC6-4C70-83AC-76FEA1A38C5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modelo.PrimerParcial", "Modelo.PrimerParcial\Modelo.PrimerParcial.csproj", "{DCA121A1-1CC6-4C70-83AC-76FEA1A38C5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

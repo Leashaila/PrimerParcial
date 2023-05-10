@@ -1,10 +1,19 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AspNetCore;
+using Microsoft.AspNetCore.Mvc;
+using Servicio.PrimerParcial;
 
 namespace PrimerParcial.Controllers
 {
     public class PrincipalController : Controller
     {
-        
+        private IServicioPrimerParcial _primerParcialServicio;
+
+        public PrincipalController(IServicioPrimerParcial primerParcialServicio)
+        {
+            _primerParcialServicio = primerParcialServicio;
+
+        }
+
 
         public IActionResult Bienvenido()
         {
@@ -17,7 +26,7 @@ namespace PrimerParcial.Controllers
         public IActionResult Resultados()
         {
 
-            ViewBag.Areas = areas;
+
 
             return View();
         }
@@ -25,35 +34,20 @@ namespace PrimerParcial.Controllers
         public IActionResult IrACalcularAreaDeRectangulo()
         {
 
-
-
             return View();
         }
-        
         [HttpPost]
-        public IActionResult CalcularArea(int baseRectangulo, int alturaRectangulo)
-        {
-            if (baseRectangulo < 0 || baseRectangulo > 100 || alturaRectangulo < 0 || alturaRectangulo > 100) {
-                ViewBag.Error = "La base y altura deben ser números entre 0 y 100.";
-                    return View("IrACalcularAreaDeRectangulo");
-            }
+        public IActionResult CalcularArea(int baseRectangulo, int alturaRectangulo) {
 
-            else {
-                // Calcular el área del rectángulo
-                int area = baseRectangulo * alturaRectangulo;
+           int resultado =  _primerParcialServicio.CalcularArea(baseRectangulo, alturaRectangulo);
+            ViewBag.Area = "El area del rectangulo es:";
+            ViewBag.Resultado = resultado;   
+            return View("IrACalcularAreaDeRectangulo");
 
 
-                areas.Add(area);
-
-
-                // Mostrar el resultado al usuario
-                ViewBag.Area = area;
-                return View("IrACalcularAreaDeRectangulo");
-
-            }
-        
         
         }
+        
 
 
 
