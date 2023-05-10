@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>Calcular area de rectangulo</h1>
+<!-- @if (ViewBag.Error != null)
+{
+            <div class="alert alert-danger">@ViewBag.Error</div>
+} -->
+
+
+<form asp-controller="Principal" asp-action="CalcularArea" method="post">
+    <div class="form-group">
+        <label for="baseRectangulo">Base:</label>
+        <input type="number" class="form-control" id="baseRectangulo" name="baseRectangulo" >
+    </div>
+    <div class="form-group">
+        <label for="alturaRectangulo">Altura:</label>
+        <input type="number" class="form-control" id="alturaRectangulo" name="alturaRectangulo" >
+    </div>
+    <button type="submit" class="btn btn-primary">Calcular área</button>
+</form>
+
+
+<!--
+@if (ViewBag.Area != null)
+{
+        <div class="alert alert-success">El área del rectángulo es: @ViewBag.Area</div>
+}
+-->
+
+
+ <h2>@ViewBag.Error</h2> 
+ <h2>El area del rectangulo es: @ViewBag.Area</h2>
+
